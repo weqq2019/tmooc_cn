@@ -1,0 +1,37 @@
+前情回顾：
+
+1. tcp编程细节
+
+   缓冲区：协调应用数据的收发速度
+   粘包： tcp
+
+2. 套接字属性： fileno() getpeername() setsockopt()
+
+3. tcp 和 udp的编程差异
+
+4. struct模块
+   pack()
+   unpack()
+
+5. http协议
+
+网络编程：  1. 理论内容中 面试问题
+          2. TCP  UDP套接字编程
+          3. HTTP请求响应模式
+
+作业： 1. fork函数理解和使用
+      2. 想一下如何使用fork创建多个子进程
+      3. http重点程序会写
+
+
+
+
+
+
+
+
+
+
+
+
+

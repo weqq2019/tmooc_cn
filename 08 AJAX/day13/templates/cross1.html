@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">向5001端口发送请求</button>
+    <script src="../static/jquery.min.js"></script>
+    <script>
+        // run_server.py
+        // @app.route('/cross_server')
+        // def cross_server():
+        //     fun = request.args.get('callback')
+        //     print(fun)
+        //     data = {"code":200,"msg":"OK"}
+        //     #"print()"
+        //     print(fun+"("+json.dumps(data)+")")
+        //     # 'print({"code": 200, "msg": "OK"})'
+        //     return fun+"("+json.dumps(data)+")"
+
+        function print(res){
+            console.log(res)
+            // var data = JSON.parse(res);
+            console.log(res.msg)
+        }
+    </script>
+    <script>
+        $('#btn').click(function(){
+            var script = document.createElement('script');
+            script.src = 'http://127.0.0.1:5001/cross_server?callback=print';
+            document.body.append(script);
+        })
+    </script>
+</body>
+</html>

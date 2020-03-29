@@ -1,0 +1,73 @@
+前情回顾
+
+1.  表关联查询
+
+    内连接 ： tb1 inner join tb2 on 条件
+
+    外连接 ： 左连接   tb1 left join tb2 on 条件
+             右连接   tb1 right join tb2 on 条件
+
+2. 视图
+
+   作用： 简化高频复杂的查询，提高数据安全，使数据更加清晰结构简单
+
+   create [or replace]  view [view_name] as  [select ...]
+   drop view [if exists] [view]
+
+3. 函数和存储过程
+
+   函数： 没有返回值  参数为输入参数  多用于获取一个值
+   存储过程 ： 没有返回值，参数分为 in  out  inout ,  call
+
+   delimiter [符号]
+
+   create function func(uid int,..)
+   returns [return_type]
+   begin
+     语句 ..;
+     return ..;
+   end
+
+
+   create procedure func(in uid int,..)
+   begin
+     语句 ..;
+   end
+
+   drop procedure [d_name]
+
+3. 事务控制
+
+   begin    commit   rollback
+
+   特性 ： 原子性  一致性   隔离性   持久性
+
+   隔离级别： 读未提交  读已提交  可重复读  串行化
+
+
+练习１：　建立一个dict 数据库
+        建立一个words数据表  id    word    mean
+
+        create table words (id int primary key auto_increment,word char(30),mean text,index(word));
+
+        将单词本中的单词插入数据库
+
+
+
+文件存储
+
+  1. 存储文件路径
+
+     优点：节省数据库空间
+     缺点: 文件容易丢失
+
+  2. 文件真是存在数据库中
+
+     优点 ： 文件安全
+     缺点 ：文件的提取和存入的速度慢
+
+
+
+
+
+
