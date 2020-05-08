@@ -1,0 +1,9 @@
+create database kfcdb charset utf8;
+use kfcdb;
+create table kfctab(
+rownum int,
+storename varchar(100),
+address varchar(200),
+cityname varchar(100),
+provincename varchar(100)
+)charset=utf8;

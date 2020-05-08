@@ -1,0 +1,45 @@
+一、热身题
+1、答案
+import requests
+
+url = 'http://www.love.com/'
+headers = {'User-Agent':'Mozilla/5.0'}
+
+html = requests.get(url=url,headers=headers).content.decode('gb2312','ignore')
+
+
+2、答案
+from urllib import parse
+
+# 方法1：使用quote()方法
+url = 'http://tencent.com/q?city={}&keyword={}&index=1'
+city = parse.quote('北京')
+keyword = parse.quote('爬虫')
+url = url.format(city,keyword)
+print(url)
+
+# 方法2：使用urlencode()方法
+url = 'http://tencent.com/q?{}'
+params = {
+    'city':'北京',
+    'keyword':'爬虫',
+    'index':1
+}
+params = parse.urlencode(params)
+url = url.format(params)
+print(url)
+
+
+3、答案：见 01_reWorkInfo.py
+
+二、实操题
+题目1答案：见 02_filmSkySpider.py、03_filmSkyIncrSpider.py
+题目2答案：见 04_novelSpider.py
+
+
+
+
+
+
+
+
